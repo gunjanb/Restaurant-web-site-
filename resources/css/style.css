@@ -1,0 +1,512 @@
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+  font-size:100%;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+.row {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ----------------------------------------------- */
+/* Book Table  */
+/* ----------------------------------------------- */
+
+.media-body .bookingandhours ,.opening-hours .bookingandhours{
+  font-size: 1rem;
+}
+
+.media-icon ,.media-body,.media-clock, .opening-hours{
+  display: table-cell;
+  vertical-align: top;
+}
+
+.icon-background{
+  color: darkorange;
+}
+
+.media-icon,.media-body,.media-clock, .opening-hours {
+    margin-left: 1rem;;
+    bottom: 40px;
+    padding-left: 1rem;
+}
+
+.header-h {
+    color: darkorange;
+    font-size: 3rem;
+    font-family: 'Satisfy', sans-serif;
+    font-weight: 300;
+     margin-top:0;
+}
+
+.header-h h1{
+    color: darkorange;
+    font-size: 3rem;
+    font-family: 'Satisfy', sans-serif;
+    font-weight: 300;
+    padding-left:8%;
+}
+
+.bookTable{
+  background-color: gainsboro;
+}
+
+.contacts-btn{
+    margin-bottom: 10px;
+    background-color:  darkorange !important;
+    color: #ffffff !important;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    text-transform: capitalize;
+    border: 0px;
+    color: #000 !important;
+}
+
+.validation {
+    color: red;
+    display:none;
+    margin: 0 0 20px;
+    font-weight:400;
+    font-size:13px;
+}
+
+#sendmessage.show, #errormessage.show, .show {
+    display:block;
+}
+
+#sendmessage {
+    color: green;
+    border:1px solid green;
+    display:none;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+#errormessage {
+    color: red;
+    display:none;
+    border:1px solid red;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+/* ----------------------------------------------- */
+/* Nav bar */
+/* ----------------------------------------------- */
+
+.navbar-inverse .navbar-text{
+    padding-top:0%;
+    color: darkorange;
+    font-family: 'Satisfy', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 5%;
+  
+}
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand > img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+ .navbar-brand {
+  height: 80px;
+}
+
+ .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+/* ----------------------------------------------- */
+/* Happy Hour img */
+/* ----------------------------------------------- */
+
+.happyHour{
+  background: url("../img/happyhour.jpg");
+  
+}
+
+/* ----------------------------------------------- */
+/* Image Slider  */
+/* ----------------------------------------------- */
+.slideshow-container {
+ position: relative;
+  left:0;
+  right:0;
+  top:0;
+  width: 100%;
+  margin:auto;
+  padding:0;
+  height:100%;
+}
+
+.mySlides .transbox {
+  margin: 0.5%;
+  margin-left: 35%;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: beige;
+  border: 1px solid black;
+  opacity: 0.8;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  width:auto;
+  
+}
+
+.mySlides > img{
+  width: 100%;
+}
+
+.transbox {
+  margin: 8%;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+  filter: alpha(opacity=60); /* For IE8 and earlier*/ 
+}
+
+.transbox p {
+  font-weight: bold;
+  color:black;
+  padding-left: 40%;
+}
+
+
+/* Caption text */
+.text {
+  color:black;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 60%;
+  text-shadow: 2px 2px ;
+  font-family: 'Satisfy', sans-serif;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* ----------------------------------------------- */
+/* Footer */
+/* ----------------------------------------------- */
+.hours , .locations, .aboutRestaurant{
+  margin-top:2%;
+  margin-bottom: 2%;
+}
+
+.aboutRestaurant{
+  padding-right:6rem;
+}
+
+.footer{
+  background-color: black;
+}
+
+.hours h3, .locations h3,.aboutRestaurant h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color:darkorange;
+}
+
+.locations h4, .hours h4{
+  font-size: 1rem;
+  font-weight: bold;
+  color: darkorange;
+}
+
+.aboutRestaurant p , .locations .address , .hours p{
+  color: darkorange;
+  font-size: 1rem;
+}
+
+ .social-icons .fa {
+  font-size: 1.5rem;
+  width: 1rem;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem; 
+  padding-right:2rem; 
+}
+
+ .social-icons .fa:hover {
+    opacity: 0.7;
+}
+
+ .social-icons .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+ .social-icons .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.social-icons .fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.social-icons .fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.map{
+  margin-top:1.5rem;
+  margin-bottom:1.5rem;
+  margin-right:1.5rem;
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+
+/* ----------------------------------------------- */
+/* Media queries */
+/* ----------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+  .navbar-brand {
+    display:none; 
+  }  
+/*
+  .navbar-collapse {
+        overflow: visible !important;
+    }
+*/
+  .slideshow-container{
+    max-height: 500px;
+  }
+  html {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  html{
+    font-size: 10px;
+  }
+  .transbox{
+     padding-right: 110%;
+    padding-left:10%;
+  }
+}
+
+
+@media only screen and (max-width: 1144px) {
+  .text {font-size: 1.5rem}
+}
+
+@media only screen and (max-width: 856px) {
+  .text {font-size: 1rem}
+}
+
+@media only screen and (max-width: 590px) {
+  .text { display:none;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .media-icon ,.media-clock{
+    display: none;
+  }
+}
+/* ----------------------------------------------- */
+/* Menu  & catering*/
+/* ----------------------------------------------- */
+.gallery-trigger{
+  padding-left:20%;
+}
+
+.menu , .catering{
+  background-color:beige;
+}
+
+.catering p , .transbox p{
+  font-size:1rem;
+}
+
+.menu-list, .header-h {
+  padding-left:35%;
+  padding-top:5%;
+  margin-bottom: 5%;
+}
+
+.menu-list h1{
+  color: darkorange;
+  font-family: 'Satisfy', sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+}
+.gallery-trigger ul li a.active, .gallery-trigger ul li a:hover {
+    background: #FFB03B;
+    color: #fff;
+    border: 1px solid #FFB03B;
+}
+.gallery-trigger ul li {
+    display: inline-block;
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    margin-left: 5%;
+}
+
+.gallery-trigger ul li a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #565656;
+    border-radius: 0px;
+    border: 1px solid #BBBBBB;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-restaurant .menu-title {
+    float: left;
+    font-family: Montserrat,arial;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: darkorange;
+}
+.menu-restaurant .menu-line {
+    position: absolute;
+    bottom: 6px;
+    border-bottom: 1px dotted rgba(0,0,0,.3);
+    margin-left: .6rem;
+    margin-right: .6rem;
+  left: 166px; 
+  right: 44px;
+}
+
+.menu-restaurant .menu-price {
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu-restaurant span.clearfix {
+   position: relative;
+   display: block;
+   padding: .6rem;  
+}
+
+/* ----------------------------------------------- */
+/* Headings */
+/* ----------------------------------------------- */
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  margin-top:0;
+  font-size: 1.5rem;
+}
+
+h3 {
+    margin-bottom: 15px;
+    margin-top:10px;
+}
+/* ----------------------------------------------- */
+/* FORM */
+/* ----------------------------------------------- */
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+
+
+
+
+
+
